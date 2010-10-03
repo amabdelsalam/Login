@@ -1,0 +1,1 @@
+map.resources :users, :member => { :enable => :put }, :has_many => :roles

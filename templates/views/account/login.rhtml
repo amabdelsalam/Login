@@ -1,0 +1,13 @@
+<div id="event" style="margin-left:40%;">
+<h2>Login</h2>
+<div id="event2"  style="height:200px;">
+	<div id="event2_1">
+		<br />
+<% form_for :user, :url => {:action => 'authenticate'} do |f| -%>
+  <p>Username:<br /><%= f.text_field :username, :class => "big_input" %></p>
+  <p>Password:<br /><%= f.password_field :password, :class => "big_input" %></p>
+  <%= submit_tag 'Login', :class=>"big_input" %>
+<% end %>
+</div>
+</div>
+</div>

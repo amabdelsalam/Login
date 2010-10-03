@@ -1,0 +1,17 @@
+<h2>Registered Users</h2>
+
+<% @role.candidate_users.each do |c| %>
+	<tr>
+	    <td><%=check_box_tag c.id, 1, @role.enrolled?(c), 
+		  :onclick => remote_function(
+		  :url => save_role_path(@role), 
+		  :with => "'user=#{c.id}&amp;show=' + this.checked", 
+		  :method => :post) %>
+		</td>	
+		<td><%=h c.username %></ts>
+	</tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'Back to Roles', roles_url %>

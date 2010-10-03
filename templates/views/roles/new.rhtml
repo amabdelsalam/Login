@@ -1,0 +1,9 @@
+<h2>Create New Role</h2>
+
+<%= error_messages_for :role %>
+
+<% form_for :role, :url => roles_path do |f| -%>
+  <p>Name:<br /><%= f.text_field :name, :size => 40 %></p>	
+  
+  <%= submit_tag 'Save' %>
+<% end -%>
